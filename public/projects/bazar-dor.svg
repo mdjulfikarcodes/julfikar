@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="420" viewBox="0 0 760 420">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#122a4a"/><stop offset="1" stop-color="#533b9e"/></linearGradient></defs>
+<rect width="760" height="420" rx="24" fill="url(#bg)"/><rect x="40" y="35" width="680" height="350" rx="18" fill="#0b1222" stroke="#6689c5" stroke-opacity=".5"/>
+<rect x="65" y="62" width="180" height="18" rx="9" fill="#73b7ff"/><rect x="65" y="96" width="260" height="10" rx="5" fill="#6f7f9e"/>
+<g fill="#18263f" stroke="#45618d"><rect x="65" y="137" width="190" height="205" rx="12"/><rect x="285" y="137" width="190" height="205" rx="12"/><rect x="505" y="137" width="190" height="205" rx="12"/></g>
+<g fill="#7ebaff"><rect x="85" y="160" width="80" height="9" rx="4"/><rect x="305" y="160" width="80" height="9" rx="4"/><rect x="525" y="160" width="80" height="9" rx="4"/></g>
+<g fill="#5ee0b0"><path d="M90 235l25-20 25 8 20-33 20 15 20-25" fill="none" stroke="#5ee0b0" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M310 245l25-25 25 7 20-40 20 12 20-32" fill="none" stroke="#5ee0b0" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M530 245l25-25 25 7 20-40 20 12 20-32" fill="none" stroke="#5ee0b0" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="65" y="370" font-family="Arial" font-size="12" fill="#b8c8e8">BAZAR DOR · PROJECT PREVIEW PLACEHOLDER</text></svg>

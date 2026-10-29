@@ -1,0 +1,283 @@
+
+@import "tailwindcss";
+
+:root {
+  --bg: #080b14;
+  --panel: #101626;
+  --panel-2: #121b2d;
+  --text: #f4f7ff;
+  --muted: #a7b0c4;
+  --line: rgba(170, 188, 220, 0.14);
+  --blue: #69a7ff;
+  --purple: #a78bfa;
+  --accent: #69a7ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(
+      ellipse at 80% 0%,
+      rgba(83, 65, 180, 0.16),
+      transparent 35%
+    ),
+    radial-gradient(
+      ellipse at 0% 30%,
+      rgba(29, 107, 190, 0.12),
+      transparent 30%
+    ),
+    var(--bg);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.container {
+  width: min(1120px, calc(100% - 40px));
+  margin-inline: auto;
+}
+
+.section {
+  padding: 92px 0;
+}
+
+.section-kicker {
+  color: var(--blue);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.section-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.1;
+  letter-spacing: -0.045em;
+  margin: 12px 0 16px;
+}
+
+.section-copy {
+  color: var(--muted);
+  line-height: 1.8;
+  max-width: 680px;
+}
+
+.gradient-text {
+  background: linear-gradient(
+    100deg,
+    #75b7ff,
+    #b7a1ff 65%,
+    #f0a7ff
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.panel {
+  background: linear-gradient(
+    145deg,
+    rgba(18, 27, 45, 0.92),
+    rgba(13, 18, 31, 0.94)
+  );
+  border: 1px solid var(--line);
+  border-radius: 22px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 12px 17px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  font-size: 0.92rem;
+  font-weight: 750;
+  transition:
+    transform 0.2s,
+    border-color 0.2s,
+    background 0.2s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  border-color: rgba(120, 171, 255, 0.6);
+}
+
+.btn-primary {
+  background: linear-gradient(100deg, #4d8fff, #8a70ee);
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 12px 34px rgba(81, 110, 255, 0.18);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.035);
+}
+
+/* Navbar */
+.nav-shell {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(8, 11, 20, 0.82);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(18px);
+}
+
+/* Desktop nav links: existing color preserved */
+.nav-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 0;
+  color: #c0c9da;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+/* Underline hidden by default */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.nav-link:hover {
+  color: white;
+}
+
+/* Active link underline */
+.nav-link.active::after {
+  transform: scaleX(1);
+}
+
+/* Mobile nav links */
+.mobile-nav-link {
+  display: block;
+  padding: 12px;
+  border-left: 3px solid transparent;
+  border-radius: 8px;
+  color: #c0c9da;
+  transition:
+    color 0.2s,
+    background 0.2s,
+    border-color 0.2s;
+}
+
+.mobile-nav-link:hover {
+  color: white;
+}
+
+.mobile-nav-link.active {
+  color: var(--accent);
+  border-left-color: var(--accent);
+  background: rgba(105, 167, 255, 0.08);
+}
+
+/* Keep existing button class working on mobile */
+@media (max-width: 767px) {
+  .container {
+    width: min(100% - 28px, 1120px);
+  }
+
+  .section {
+    padding: 68px 0;
+  }
+
+  .nav-shell .btn-secondary.md\:hidden {
+    display: inline-flex;
+  }
+}
+
+/* Desktop/tablet: hamburger hidden */
+@media (min-width: 768px) {
+  .nav-shell .btn-secondary.md\:hidden {
+    display: none !important;
+  }
+}
+
+.skill-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 13px;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  color: #d9e2f3;
+  font-size: 0.9rem;
+}
+
+.project-art {
+  min-height: 190px;
+  overflow: hidden;
+  border-radius: 16px;
+  background: linear-gradient(
+    135deg,
+    rgba(61, 133, 255, 0.2),
+    rgba(157, 99, 255, 0.18)
+  );
+}
+
+.project-art img {
+  width: 100%;
+  height: 100%;
+  min-height: 190px;
+  object-fit: cover;
+  display: block;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 11px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.035);
+  border-radius: 999px;
+  color: #d8e2f6;
+  font-size: 0.82rem;
+}
+
+.dot {
+  height: 7px;
+  width: 7px;
+  border-radius: 999px;
+  background: #72e5b0;
+  box-shadow: 0 0 12px #72e5b0;
+}
