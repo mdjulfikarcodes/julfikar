@@ -89,7 +89,7 @@ export const portfolio = {
       image: "/projects/bangla-news-24.svg",
       description: "A Bangla news website concept focused on readable headlines, news categories, and a responsive reading experience.",
       tech: ["Next.js", "React", "TypeScript", "CSS", "REST API"],
-      liveUrl: "#",
+      liveUrl: "https://bangla-news-24-khaki.vercel.app/",
       repoUrl: "https://github.com/mdjulfikarcodes/bangla-news-24",
       challenges: [
         "Presenting news content in a clean hierarchy.",

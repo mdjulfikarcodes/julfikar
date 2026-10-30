@@ -50,13 +50,8 @@ export default function HomePage() {
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
-            <a
-              className="btn btn-primary"
-              href={portfolio.resumePath}
-              download
-            >
-              <ArrowDownToLine size={17} />
-              Download Resume
+            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+              <button className="btn btn-primary">Download Resume</button>
             </a>
 
             <a className="btn btn-secondary" href="#projects">
